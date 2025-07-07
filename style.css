@@ -1,0 +1,192 @@
+:root {
+  --bg-light: #e3f2fd;
+  --bg-dark: #407ec5;
+  --card-light: #ffffff;
+  --card-dark: #1c60a5;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --accent: #1a64a0;
+  --small-text-color-light: rgb(0, 0, 0);
+  --small-text-color-dark: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.navbar {
+  position: relative;
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.navbar button {
+  position: absolute;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+}
+
+.form-section {
+  background-color: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 5rem auto 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 50%;
+}
+
+
+body.dark .form-section {
+  background-color: var(--card-dark);
+}
+
+form input,
+form textarea {
+  width: 98%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+form button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.notes-section {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.notes-section h2 {
+  text-align: center;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.note-card {
+  background-color: var(--card-light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+body.dark .note-card {
+  background-color: var(--card-dark);
+  color: white;
+}
+
+.note-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.note-card small {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--small-text-color-light);
+}
+
+body.dark .note-card small{
+  color:var(--small-text-color-dark);
+}
+
+.emoji-picker {
+  margin: 1rem 0;
+}
+
+.emoji-picker label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.emojis button {
+  font-size: 1.5rem;
+  background: transparent;
+  border: 2px solid transparent;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  border-radius: 8px;
+}
+
+.emojis button.selected {
+  border-color: var(--accent);
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}

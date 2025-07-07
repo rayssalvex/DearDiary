@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dear Diary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1> Dear Diary - pensamentos, anotações, divagações etc...</h1>
+    <button id="darkModeToggle">🌙</button>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Criar nova anotação</h2>
+      <form id="noteForm">
+        <input type="date" id="date" required />
+        <input type="text" id="title" placeholder="Título" required />
+        <textarea id="content" placeholder="Conteúdo da anotação" required></textarea>
+        <div class="emoji-picker">
+        <label>Como você está se sentindo?</label>
+        <div class="emojis" id="emojiSelector">
+          <button type="button">😄</button>
+          <button type="button">😢</button>
+          <button type="button">😠</button>
+          <button type="button">😍</button>
+          <button type="button">🤓</button>
+          <button type="button">😱</button>
+          <button type="button">❤️</button>
+        </div>
+        <input type="hidden" id="emotion" />
+      </div>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section class="notes-section" id="notesContainer">
+      <h2>Minhas Anotações</h2>
+      <div class="notes-grid" id="notesGrid">
+        <div class="note-card">
+      <h3>Dica de Javascript</h3>
+      <small>03-07-2025 - Me sentindo: 🤓</small>
+      <p>Separar partes do seu código JavaScript em funções facilita a manutenção e evita repetições. Sempre pensar em componentes reutilizáveis.</p>
+    </div>
+    <div class="note-card">
+      <h3>Anotações da aula de css</h3>
+      <small>04-07-2025 - Me sentindo: 🤓</small>
+      <p>Com display: flex e justify-content, alinhar elementos é muito mais fácil. Ideal para layouts responsivos.</p>
+    </div>
+        <div class="note-card">
+      <h3>Livro: A natureza da mordida</h3>
+      <small>04-07-2025 - Me sentindo: ✨</small>
+      <p>"Algumas coisas que li não se contentaram com minha memória, caíram no meu sistema digestivo, e eu as incorporei como a um bom bife. A ponto de não saber mais se são minhas as palavras que digo ou se eu deveria viver entre aspas."</em><br>— Carla Madeira</p>
+    </div>
+    <div class="note-card">
+      <h3>Livro: Véspera</h3>
+      <small>05-07-2025 - Me sentindo: 😢</small>
+      <p>"Acho um perigo o elogio excessivo. Gera vaidade, e vaidade é um vício terrível. As pessoas se agarram a ela e ficam comprometidas em manter os elogios em alta, o que é fatal em qualquer área: nas artes, na ciência e principalmente na vida."<br>— Carla Madeira</p>
+    </div>
+      </div>
+    </section>
+  </main>
+
+<footer>
+  <div class="footer-container">
+    <p>@2025 Dear Diary - Projeto 1 - Página de Diário - Todos os direitos reservados. Developed by:</p>
+    <div class="footer-social-icons">
+      <a href="https://www.linkedin.com/in/rayssa-santos-alves/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+      </a>
+      <a href="https://github.com/rayssalvex" target="_blank" rel="noopener noreferrer">
+        <img src="assets/github.png" alt="GitHub" class="social-icon" />
+      </a>
+      <a href="https://www.instagram.com/rayssalvex/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram.png" alt="Instagram" class="social-icon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
